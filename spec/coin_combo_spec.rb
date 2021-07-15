@@ -7,4 +7,9 @@ describe('Change#coin_counter') do
     number = Change.new(100)
     expect(number.coin_counter).to(eq([4]))
   end
+
+  it('will divide the inputted number by 25 and 10 correctly') do
+    number2 = Change.new(110)
+    expect(number2.coin_counter).to(eq([4,1]))
+  end
 end

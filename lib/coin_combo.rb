@@ -10,6 +10,9 @@ class Change
     #   x += 1
       if (@number%25 == 0)
         coin_array.push(@number/25)
+      elsif (@number%10 == 0)
+        coin_array.push((@number/25).floor)
+        coin_array.push((@number.remainder(25))/10)
     #   end
       end
     coin_array
@@ -17,4 +20,9 @@ class Change
 end
 
 
+# 10 = number.remainder(25)
+# dime%10 == 0
+# coin_array.push(number.remainder(25))
 
+
+# 
